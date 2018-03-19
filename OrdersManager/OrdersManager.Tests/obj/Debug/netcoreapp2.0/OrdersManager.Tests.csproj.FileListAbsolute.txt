@@ -1,0 +1,17 @@
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Tests.deps.json
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Tests.runtimeconfig.json
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Tests.runtimeconfig.dev.json
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Tests.dll
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Tests.pdb
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\obj\Debug\netcoreapp2.0\OrdersManager.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\obj\Debug\netcoreapp2.0\OrdersManager.Tests.AssemblyInfoInputs.cache
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\obj\Debug\netcoreapp2.0\OrdersManager.Tests.AssemblyInfo.cs
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\obj\Debug\netcoreapp2.0\OrdersManager.Tests.dll
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\obj\Debug\netcoreapp2.0\OrdersManager.Tests.pdb
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\obj\Debug\netcoreapp2.0\OrdersManager.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Core.dll
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Core.pdb
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\obj\Debug\netcoreapp2.0\OrdersManager.Tests.csproj.CopyComplete
