@@ -4,6 +4,7 @@ using OrdersManager.Core.Specification;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace OrdersManager.Infrastructure.Stubs
 {
@@ -16,9 +17,9 @@ namespace OrdersManager.Infrastructure.Stubs
             this.memRepository = memRepository;
         }
 
-        public Order FindById(Guid id)
+        public async Task<Order> FindById(Guid id)
         {
-            return this.memRepository.FindById(id);
+            return await this.memRepository.FindById(id);
         }
 
         public Order FindOne(ISpecification<Order> spec)

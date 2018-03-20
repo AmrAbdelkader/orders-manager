@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace OrdersManager.Infrastructure
 {
@@ -12,8 +13,8 @@ namespace OrdersManager.Infrastructure
         where TEntity : IAggregateRoot
     {
         protected static List<TEntity> entities = new List<TEntity>();
-
-        public TEntity FindById(Guid id)
+            
+        public async Task<TEntity> FindById(Guid id)
         {
             return entities.Where(x => x.Id == id).FirstOrDefault();
         }

@@ -4,6 +4,7 @@ using OrdersManager.Core.Users;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace OrdersManager.Infrastructure.Stubs
 {
@@ -19,9 +20,9 @@ namespace OrdersManager.Infrastructure.Stubs
             this.memRepository.Add(customer);
         }
 
-        public User FindById(Guid id)
+        public async Task<User> FindById(Guid id)
         {
-            return this.memRepository.FindById(id);
+            return await this.memRepository.FindById(id);
         }
 
         public User FindOne(ISpecification<User> spec)

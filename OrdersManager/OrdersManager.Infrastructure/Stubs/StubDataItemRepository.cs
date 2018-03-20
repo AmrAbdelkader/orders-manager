@@ -3,6 +3,7 @@ using OrdersManager.Core.Items;
 using OrdersManager.Core.Specification;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace OrdersManager.Infrastructure.Stubs
 {
@@ -17,9 +18,9 @@ namespace OrdersManager.Infrastructure.Stubs
             this.memRepository.Add(Item.Create(new Guid(), "iPhone", 2, 500.02m));
         }
 
-        public Item FindById(Guid id)
+        public async Task<Item> FindById(Guid id)
         {
-            return this.memRepository.FindById(id);
+            return await this.memRepository.FindById(id);
         }
 
         public Item FindOne(ISpecification<Item> spec)

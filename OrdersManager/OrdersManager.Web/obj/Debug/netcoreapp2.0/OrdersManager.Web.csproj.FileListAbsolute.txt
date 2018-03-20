@@ -3,12 +3,6 @@ C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersMan
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\bin\Debug\netcoreapp2.0\OrdersManager.Web.runtimeconfig.dev.json
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\bin\Debug\netcoreapp2.0\OrdersManager.Web.dll
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\bin\Debug\netcoreapp2.0\OrdersManager.Web.pdb
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\obj\Debug\netcoreapp2.0\OrdersManager.Web.csproj.CoreCompileInputs.cache
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\obj\Debug\netcoreapp2.0\OrdersManager.Web.AssemblyInfoInputs.cache
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\obj\Debug\netcoreapp2.0\OrdersManager.Web.AssemblyInfo.cs
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\obj\Debug\netcoreapp2.0\OrdersManager.Web.dll
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\obj\Debug\netcoreapp2.0\OrdersManager.Web.pdb
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\obj\Debug\netcoreapp2.0\OrdersManager.Web.csprojResolveAssemblyReference.cache
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\bin\Debug\netcoreapp2.0\OrdersManager.Application.dll
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\bin\Debug\netcoreapp2.0\OrdersManager.Core.dll
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\bin\Debug\netcoreapp2.0\OrdersManager.Infrastructure.dll
@@ -17,4 +11,10 @@ C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersMan
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\bin\Debug\netcoreapp2.0\OrdersManager.Core.pdb
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\bin\Debug\netcoreapp2.0\OrdersManager.Application.pdb
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\bin\Debug\netcoreapp2.0\OrdersManager.Infrastructure.pdb
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\obj\Debug\netcoreapp2.0\OrdersManager.Web.csprojResolveAssemblyReference.cache
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\obj\Debug\netcoreapp2.0\OrdersManager.Web.csproj.CoreCompileInputs.cache
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\obj\Debug\netcoreapp2.0\OrdersManager.Web.AssemblyInfoInputs.cache
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\obj\Debug\netcoreapp2.0\OrdersManager.Web.AssemblyInfo.cs
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\obj\Debug\netcoreapp2.0\OrdersManager.Web.csproj.CopyComplete
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\obj\Debug\netcoreapp2.0\OrdersManager.Web.dll
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Web\obj\Debug\netcoreapp2.0\OrdersManager.Web.pdb

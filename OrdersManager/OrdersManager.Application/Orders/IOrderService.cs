@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace OrdersManager.Application.Orders
 {
     public interface IOrderService
     {
-        OrderDto Create(OrderDto ordertDto);
-        OrderDto Add(OrderItemDto cartProductDto);
+        Task<OrderDto> Create(OrderDto ordertDto);
+        Task<OrderDto> AddItem(OrderItemDto cartProductDto);
         OrderDto Remove(Guid customerId, Guid productId);
-        OrderDto Get(Guid customerId);
+        Task<OrderDto> Get(Guid orderId);
     }
 }

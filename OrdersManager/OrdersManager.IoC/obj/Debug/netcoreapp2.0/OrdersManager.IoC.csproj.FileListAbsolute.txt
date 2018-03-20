@@ -1,7 +1,3 @@
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.csprojResolveAssemblyReference.cache
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.csproj.CoreCompileInputs.cache
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.AssemblyInfoInputs.cache
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.AssemblyInfo.cs
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\bin\Debug\netcoreapp2.0\OrdersManager.IoC.deps.json
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\bin\Debug\netcoreapp2.0\OrdersManager.IoC.dll
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\bin\Debug\netcoreapp2.0\OrdersManager.IoC.pdb
@@ -13,6 +9,10 @@ C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersMan
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\bin\Debug\netcoreapp2.0\OrdersManager.Infrastructure.pdb
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\bin\Debug\netcoreapp2.0\OrdersManager.Core.pdb
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\bin\Debug\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.csprojResolveAssemblyReference.cache
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.csproj.CoreCompileInputs.cache
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.AssemblyInfoInputs.cache
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.AssemblyInfo.cs
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.csproj.CopyComplete
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.dll
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.pdb

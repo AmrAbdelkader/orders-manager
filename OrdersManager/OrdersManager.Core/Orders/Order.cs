@@ -36,7 +36,7 @@ namespace OrdersManager.Core.Orders
             return order;
         }
 
-        public virtual void Add(OrderItem orderItem)
+        public virtual void AddItem(OrderItem orderItem)
         {
             if (orderItem == null)
                 throw new ArgumentNullException();

@@ -7,6 +7,7 @@ using OrdersManager.Core.Users;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace OrdersManager.Application.Orders
 {
@@ -26,25 +27,47 @@ namespace OrdersManager.Application.Orders
             this.orderRepository = orderRepository;
         }
         
-        public OrderDto Create(OrderDto orderDto)
+        public async Task<OrderDto> Create(OrderDto orderDto)
         {
-            User customer = userRepository.FindById(orderDto.CustomerId);
+            User customer = await userRepository.FindById(orderDto.CustomerId);
             if (customer == null)
                 throw new OrdersServiceException($"Customer with Id {orderDto.CustomerId} does not exist.");
 
             Order newOrder = Order.Create(customer);
             orderRepository.Add(newOrder);
+            return Mapper.Map<OrderDto>(newOrder);
+        }
+
+        public async Task<OrderDto> AddItem(OrderItemDto orderItemDto)
+        {
+            OrderDto orderDto = null;
+                
+            User customer = await userRepository.FindById(orderItemDto.CustomerId);
+            if (customer == null)
+                throw new OrdersServiceException($"Customer with Id {orderItemDto.CustomerId} does not exist.");
+
+            Order order = orderRepository.FindOne(new UserOrderSpec(orderItemDto.CustomerId));
+            //if (order == null)
+            //    throw new OrdersServiceException($"Order with Id {orderItemDto.OrderId} does not exist.");
+
+            Item item = await itemRepository.FindById(orderItemDto.ItemId);
+            if(item == null)
+                throw new OrdersServiceException($"Item with Id {orderItemDto.ItemId} does not exist.");
+            
+            order.AddItem(OrderItem.Create(customer, order, item, orderItemDto.Quantity));
+
+            orderDto = Mapper.Map<Order, OrderDto>(order);
+            unitOfWork.Commit();
             return orderDto;
         }
 
-        public OrderDto Add(OrderItemDto orderItemDto)
+        public async Task<OrderDto> Get(Guid OrderId)
         {
-            throw new NotImplementedException();
-        }
+            Order order = await orderRepository.FindById(OrderId);
+            if (order == null)
+                throw new OrdersServiceException($"Order with Id {OrderId} does not exist.");
 
-        public OrderDto Get(Guid customerId)
-        {
-            throw new NotImplementedException();
+            return Mapper.Map<OrderDto>(order);
         }
 
         public OrderDto Remove(Guid customerId, Guid productId)

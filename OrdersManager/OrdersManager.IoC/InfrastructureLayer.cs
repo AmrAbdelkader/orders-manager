@@ -16,12 +16,12 @@ namespace OrdersManager.IoC
     {
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services)
         {
-            services.AddScoped<IUnitOfWork, MemoryUnitOfWork>();
-            services.AddScoped(typeof(IRepository<>), typeof(MemoryRepository<>));
-            services.AddScoped(typeof(MemoryRepository<>), typeof(MemoryRepository<>));
-            services.AddScoped<IRepository<User>, StubDataUserRepository>();
-            services.AddScoped<IRepository<Order>, StubDataOrderRepository>();
-            services.AddScoped<IRepository<Item>, StubDataItemRepository>();
+            services.AddSingleton<IUnitOfWork, MemoryUnitOfWork>();
+            services.AddSingleton(typeof(IRepository<>), typeof(MemoryRepository<>));
+            services.AddSingleton(typeof(MemoryRepository<>), typeof(MemoryRepository<>));
+            services.AddSingleton<IRepository<User>, StubDataUserRepository>();
+            services.AddSingleton<IRepository<Order>, StubDataOrderRepository>();
+            services.AddSingleton<IRepository<Item>, StubDataItemRepository>();
 
             //services.AddSingleton()
             //container.Register(Component.For(typeof(IRepository<>), typeof(MemoryRepository<>)).ImplementedBy(typeof(MemoryRepository<>)).LifestyleSingleton());

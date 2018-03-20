@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OrdersManager.Application.Exceptions;
 using OrdersManager.Application.Orders;
 using OrdersManager.Web.Filters;
 
@@ -31,9 +32,17 @@ namespace OrdersManager.Web.Controllers
 
         // GET: api/Orders/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public async Task<ActionResult> Get(Guid id)
         {
-            return "value";
+            try
+            {
+                var order = await _orderService.Get(id);
+                return Ok(order);
+            }
+            catch (OrdersServiceException exc)
+            {
+                return NotFound(exc.Message);
+            }
         }
 
         // POST: api/Orders
@@ -43,12 +52,12 @@ namespace OrdersManager.Web.Controllers
         {
             try
             {
-                var createdOrder = _orderService.Create(orderDto);
-                return Ok(createdOrder);
+                var createdOrder = await _orderService.Create(orderDto);
+                return Created($"api/Orders/{createdOrder.Id}", createdOrder);
             }
-            catch (Exception exc)
+            catch (OrdersServiceException exc)
             {
-                return NotFound("user does not exist");
+                return NotFound(exc.Message);
             }
         }
 
