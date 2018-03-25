@@ -21,3 +21,9 @@ C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersMan
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\Mono.Cecil.dll
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Application.dll
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Application.pdb
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Infrastructure.dll
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.IoC.dll
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Web.dll
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Web.pdb
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Infrastructure.pdb
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.IoC.pdb

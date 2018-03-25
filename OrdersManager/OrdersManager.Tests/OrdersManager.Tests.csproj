@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\OrdersManager.Application\OrdersManager.Application.csproj" />
     <ProjectReference Include="..\OrdersManager.Core\OrdersManager.Core.csproj" />
+    <ProjectReference Include="..\OrdersManager.Web\OrdersManager.Web.csproj" />
   </ItemGroup>
 
 </Project>

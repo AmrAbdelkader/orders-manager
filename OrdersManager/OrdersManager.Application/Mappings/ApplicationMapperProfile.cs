@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using OrdersManager.Application.Items;
 using OrdersManager.Application.Orders;
+using OrdersManager.Core.Items;
 using OrdersManager.Core.Orders;
 using System;
 using System.Collections.Generic;
@@ -7,20 +9,17 @@ using System.Text;
 
 namespace OrdersManager.Application.Mappings
 {
-    class ApplicationMapperProfile : Profile
+    public class ApplicationMapperProfile : Profile
     {
         public ApplicationMapperProfile()
         {
             CreateMap<Order, OrderDto>();
-            //Mapper.CreateMap<CartProduct, CartProductDto>();
+            CreateMap<OrderItem, OrderItemDto>();
+            CreateMap<Item, ItemDto>();
 
-            //Mapper.CreateMap<Purchase, CheckOutResultDto>()
-            //    .ForMember(x => x.PurchaseId, options => options.MapFrom(x => x.Id));
 
-            //Mapper.CreateMap<CreditCard, CreditCardDto>();
-            //Mapper.CreateMap<Customer, CustomerDto>();
-            //Mapper.CreateMap<Product, ProductDto>();
-            //Mapper.CreateMap<CustomerPurchaseHistoryReadModel, CustomerPurchaseHistoryDto>();
+            CreateMap<OrderItem, OrderItemOutputModel>();
+            
             //Mapper.CreateMap<DomainEventRecord, EventDto>();
         }
     }

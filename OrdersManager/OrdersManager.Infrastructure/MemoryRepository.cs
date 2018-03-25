@@ -19,22 +19,22 @@ namespace OrdersManager.Infrastructure
             return entities.Where(x => x.Id == id).FirstOrDefault();
         }
 
-        public TEntity FindOne(ISpecification<TEntity> spec)
+        public async Task<TEntity> FindOne(ISpecification<TEntity> spec)
         {
             return entities.Where(spec.IsSatisfiedBy).FirstOrDefault();
         }
 
-        public IEnumerable<TEntity> Find(ISpecification<TEntity> spec)
+        public async Task<IEnumerable<TEntity>> Find(ISpecification<TEntity> spec)
         {
             return entities.Where(spec.IsSatisfiedBy);
         }
 
-        public void Add(TEntity entity)
+        public async Task Add(TEntity entity)
         {
             entities.Add(entity);
         }
 
-        public void Remove(TEntity entity)
+        public async Task Remove(TEntity entity)
         {
             entities.Remove(entity);
         }

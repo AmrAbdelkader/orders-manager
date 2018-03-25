@@ -39,7 +39,7 @@ namespace OrdersManager.Web.Controllers
                 var order = await _orderService.Get(id);
                 return Ok(order);
             }
-            catch (OrdersServiceException exc)
+            catch (ServiceException exc)
             {
                 return NotFound(exc.Message);
             }
@@ -55,16 +55,26 @@ namespace OrdersManager.Web.Controllers
                 var createdOrder = await _orderService.Create(orderDto);
                 return Created($"api/Orders/{createdOrder.Id}", createdOrder);
             }
-            catch (OrdersServiceException exc)
+            catch (ServiceException exc)
             {
                 return NotFound(exc.Message);
             }
         }
 
         // PUT: api/Orders/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        [HttpPut("{orderId}")]
+        [ValidateModel]
+        public async Task<ActionResult> Put(Guid orderId, [FromBody]OrderItemDto orderItemDto)
         {
+            try
+            {
+                var updatedOrder = await _orderService.AddItem(orderId, orderItemDto);
+                return Ok(updatedOrder);
+            }
+            catch (ServiceException exc)
+            {
+                return NotFound(exc.Message);
+            }
         }
 
         // DELETE: api/ApiWithActions/5

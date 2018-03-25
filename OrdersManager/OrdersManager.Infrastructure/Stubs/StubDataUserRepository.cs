@@ -16,7 +16,8 @@ namespace OrdersManager.Infrastructure.Stubs
         {
             this.memRepository = memRepository;
 
-            User customer = User.Create(new Guid("c7daa440-096e-448b-ae45-d71268078225"), "Amr", "Elsayed", "amr.elsayed@gmail.com");
+            User customer = User.Create(new Guid("c7daa440-096e-448b-ae45-d71268078225"),
+                "Amr", "Elsayed", "amr.elsayed@gmail.com");
             this.memRepository.Add(customer);
         }
 
@@ -25,22 +26,22 @@ namespace OrdersManager.Infrastructure.Stubs
             return await this.memRepository.FindById(id);
         }
 
-        public User FindOne(ISpecification<User> spec)
+        public async Task<User> FindOne(ISpecification<User> spec)
         {
-            return this.memRepository.FindOne(spec);
+            return await this.memRepository.FindOne(spec);
         }
 
-        public IEnumerable<User> Find(ISpecification<User> spec)
+        public async Task<IEnumerable<User>> Find(ISpecification<User> spec)
         {
-            return this.memRepository.Find(spec);
+            return await this.memRepository.Find(spec);
         }
 
-        public void Add(User entity)
+        public async Task Add(User entity)
         {
             this.memRepository.Add(entity);
         }
 
-        public void Remove(User entity)
+        public async Task Remove(User entity)
         {
             this.memRepository.Remove(entity);
         }

@@ -6,16 +6,16 @@ using System.Text;
 
 namespace OrdersManager.Core.Orders
 {
-    public class OrderItem
+    public class OrderItem : IEquatable<OrderItem>
     {
-        public virtual Guid CartId { get; protected set; }
-        public virtual Guid CustomerId { get; protected set; }
-        public virtual int Quantity { get; protected set; }
-        public virtual Guid ItemId { get; protected set; }
-        public virtual DateTime Created { get; protected set; }
-        public virtual decimal Cost { get; protected set; }
+        public virtual Guid OrderId { get; set; }
+        public virtual Guid ItemId { get; set; }
+        public virtual int Quantity { get; set; }
+        public virtual decimal Cost { get; set; }
+        public virtual DateTime Created { get; set; }
+        public virtual DateTime Updated { get; set; }
 
-        public static OrderItem Create(User user, Order order, Item item, int quantity)
+        public static OrderItem Create(Order order, Item item, int quantity)
         {
             //if (order == null)
             //    throw new ArgumentNullException("cart");
@@ -25,8 +25,7 @@ namespace OrdersManager.Core.Orders
 
             OrderItem orderItem = new OrderItem()
             {
-                CustomerId = user.Id,
-                CartId = order.Id,
+                OrderId = order.Id,
                 ItemId = item.Id,
                 Quantity = quantity,
                 Created = DateTime.Now,
@@ -34,6 +33,11 @@ namespace OrdersManager.Core.Orders
             };
 
             return orderItem;
+        }
+
+        public bool Equals(OrderItem other)
+        {
+            return this.ItemId == other.ItemId && this.OrderId == other.OrderId;
         }
     }
 }

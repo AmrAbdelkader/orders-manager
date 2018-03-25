@@ -15,7 +15,14 @@ namespace OrdersManager.Infrastructure.Stubs
         {
             this.memRepository = memRepository;
 
-            this.memRepository.Add(Item.Create(new Guid(), "iPhone", 2, 500.02m));
+            this.memRepository.Add(Item.Create(new Guid("970d5366-20b3-4f8d-87a6-973cba45c538"),
+                "GTA V For Play Station", 49.00m));
+
+            this.memRepository.Add(Item.Create(new Guid("39b6448e-564c-460c-be06-55fdc31f866d"),
+                "Arduino Stater kit", 100.00m));
+
+            this.memRepository.Add(Item.Create(new Guid("35b00b6e-7918-4f70-b0e1-75b4a23a835c"),
+                "Manchester Bee Logo <3", 20.02m));
         }
 
         public async Task<Item> FindById(Guid id)
@@ -23,22 +30,22 @@ namespace OrdersManager.Infrastructure.Stubs
             return await this.memRepository.FindById(id);
         }
 
-        public Item FindOne(ISpecification<Item> spec)
+        public async Task<Item> FindOne(ISpecification<Item> spec)
         {
-            return this.memRepository.FindOne(spec);
+            return await this.memRepository.FindOne(spec);
         }
 
-        public IEnumerable<Item> Find(ISpecification<Item> spec)
+        public async Task<IEnumerable<Item>> Find(ISpecification<Item> spec)
         {
-            return this.memRepository.Find(spec);
+            return await this.memRepository.Find(spec);
         }
 
-        public void Add(Item entity)
+        public async Task Add(Item entity)
         {
             this.memRepository.Add(entity);
         }
 
-        public void Remove(Item entity)
+        public async Task Remove(Item entity)
         {
             this.memRepository.Remove(entity);
         }

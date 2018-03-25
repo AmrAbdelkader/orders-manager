@@ -22,10 +22,7 @@ namespace OrdersManager.IoC
             services.AddSingleton<IRepository<User>, StubDataUserRepository>();
             services.AddSingleton<IRepository<Order>, StubDataOrderRepository>();
             services.AddSingleton<IRepository<Item>, StubDataItemRepository>();
-
-            //services.AddSingleton()
-            //container.Register(Component.For(typeof(IRepository<>), typeof(MemoryRepository<>)).ImplementedBy(typeof(MemoryRepository<>)).LifestyleSingleton());
-
+            
             return services;
         }
     }

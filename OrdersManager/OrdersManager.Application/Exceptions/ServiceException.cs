@@ -4,18 +4,18 @@ using System.Text;
 
 namespace OrdersManager.Application.Exceptions
 {
-    public class OrdersServiceException : Exception
+    public class ServiceException : Exception
     {
-        public OrdersServiceException()
+        public ServiceException()
         {
         }
 
-        public OrdersServiceException(string message)
+        public ServiceException(string message)
         : base(message)
         {
         }
 
-        public OrdersServiceException(string message, Exception inner)
+        public ServiceException(string message, Exception inner)
         : base(message, inner)
         {
         }

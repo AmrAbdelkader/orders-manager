@@ -11,8 +11,17 @@ namespace OrdersManager.Application.Orders
     {
         public Guid Id { get; set; }
         public Guid CustomerId { get; set; }
-        public List<OrderItemDto> Items { get; set; }
+        public IList<OrderItemOutputModel> Items { get; set; }
         public DateTime Created { get; set; }
         public DateTime Modified { get; set; }
     }
+
+    public class OrderItemOutputModel
+    {
+        public Guid ItemId { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int Quantity { get; set; }
+    }
+
 }

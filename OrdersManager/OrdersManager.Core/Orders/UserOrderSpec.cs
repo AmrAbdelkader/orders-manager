@@ -6,20 +6,20 @@ using System.Text;
 
 namespace OrdersManager.Core.Orders
 {
-    public class UserOrderSpec : SpecificationBase<Order>
+    public class OrderSpec : SpecificationBase<Order>
     {
-        private readonly Guid customerId;
+        private readonly Guid orderId;
 
-        public UserOrderSpec(Guid customerId)
+        public OrderSpec(Guid orderId)
         {
-            this.customerId = customerId;
+            this.orderId = orderId;
         }
 
         public override Expression<Func<Order, bool>> SpecExpression
         {
             get
             {
-                return cart => cart.CustomerId == this.customerId;
+                return order => order.Id == this.orderId;
             }
         }
 

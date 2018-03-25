@@ -12,6 +12,7 @@ namespace OrdersManager.Core.Orders
     {
         public virtual Guid Id { get; protected set; }
         public virtual Guid CustomerId { get; protected set; }
+        public virtual DateTime Created { get; protected set; }
 
         private List<OrderItem> OrderItems = new List<OrderItem>();
 
@@ -20,20 +21,26 @@ namespace OrdersManager.Core.Orders
             get { return OrderItems.AsReadOnly(); }
         }
 
-        public static Order Create(User user)
+        public static Order Create(Guid Id, Guid userId)
         {
-            if (user == null)
-                throw new ArgumentNullException("customer");
+            //if (user == null)
+            //    throw new ArgumentNullException("customer");
 
             Order order = new Order
             {
-                Id = Guid.NewGuid(),
-                CustomerId = user.Id
+                Id = Id,
+                CustomerId = userId,
+                Created = DateTime.Now
             };
-            
+
             //DomainEvents.Raise<OrderCreated>(new OrderCreated() { Order = order });
 
             return order;
+        }
+
+        public static Order Create(Guid userId)
+        {
+            return Create(Guid.NewGuid(), userId);
         }
 
         public virtual void AddItem(OrderItem orderItem)
@@ -41,9 +48,18 @@ namespace OrdersManager.Core.Orders
             if (orderItem == null)
                 throw new ArgumentNullException();
 
-            //DomainEvents.Raise<ProductAddedCart>(new ProductAddedCart() { CartProduct = cartProduct });
+            if (orderItem.Quantity <= 0)
+                throw new DomainException("Item quantity should be greater than 0.");
 
-            this.OrderItems.Add(orderItem);
+            /// if the new order item is already exists in the order then update its quantity, otherwise add it in the order.
+            var existingOrderItem = OrderItems.Find(i => i.ItemId == orderItem.ItemId);
+
+            if (existingOrderItem != null)
+                existingOrderItem.Quantity = orderItem.Quantity;
+            else
+                OrderItems.Add(orderItem);
+
+            //DomainEvents.Raise<ProductAddedCart>(new ProductAddedCart() { CartProduct = cartProduct });
         }
     }
 }

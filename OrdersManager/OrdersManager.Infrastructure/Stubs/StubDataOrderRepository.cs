@@ -15,6 +15,9 @@ namespace OrdersManager.Infrastructure.Stubs
         public StubDataOrderRepository(MemoryRepository<Order> memRepository)
         {
             this.memRepository = memRepository;
+
+            this.memRepository.Add(Order.Create(new Guid("2143d854-0982-44b5-9c5d-acfaf3b7236a"),
+                new Guid("c7daa440-096e-448b-ae45-d71268078225")));
         }
 
         public async Task<Order> FindById(Guid id)
@@ -22,22 +25,22 @@ namespace OrdersManager.Infrastructure.Stubs
             return await this.memRepository.FindById(id);
         }
 
-        public Order FindOne(ISpecification<Order> spec)
+        public async Task<Order> FindOne(ISpecification<Order> spec)
         {
-            return this.memRepository.FindOne(spec);
+            return await this.memRepository.FindOne(spec);
         }
 
-        public IEnumerable<Order> Find(ISpecification<Order> spec)
+        public async Task<IEnumerable<Order>> Find(ISpecification<Order> spec)
         {
-            return this.memRepository.Find(spec);
+            return await this.memRepository.Find(spec);
         }
 
-        public void Add(Order entity)
+        public async Task Add(Order entity)
         {
             this.memRepository.Add(entity);
         }
 
-        public void Remove(Order entity)
+        public async Task Remove(Order entity)
         {
             this.memRepository.Remove(entity);
         }
