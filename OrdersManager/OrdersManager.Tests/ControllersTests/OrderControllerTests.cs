@@ -18,6 +18,9 @@ namespace OrdersManager.Tests.ControllersTests
     {
         Guid OrderId = new Guid("2143d854-0982-44b5-9c5d-acfaf3b7236a");
         Guid CustomerId = new Guid("c7daa440-096e-448b-ae45-d71268078225");
+
+        Guid ItemId = new Guid("");
+
         Mock<IOrderService> orderService;
 
         [SetUp]
@@ -76,5 +79,26 @@ namespace OrdersManager.Tests.ControllersTests
 
         }
 
+        //[Test]
+        //[Category("ControllersTests")]
+        //public async Task RemoveItem_ValidExistinItem_ReturnsOk()
+        //{
+        //    //Arrange
+        //    OrderItemDto _orderDto = new OrderItemDto
+        //    {
+        //        ItemId = 
+        //    };
+
+        //    orderService.Setup(s => s.Remove(_orderDto)).ReturnsAsync(_orderDto);
+
+        //    OrdersController ordersController = new OrdersController(orderService.Object);
+
+        //    //Act
+        //    var actionResult = await ordersController.Post(_orderDto);
+
+        //    //Assert
+        //    Assert.IsNotNull(actionResult);
+        //    Assert.IsInstanceOf(typeof(CreatedResult), actionResult);
+        //}
     }
 }

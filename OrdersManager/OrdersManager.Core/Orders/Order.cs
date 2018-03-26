@@ -61,5 +61,16 @@ namespace OrdersManager.Core.Orders
 
             //DomainEvents.Raise<ProductAddedCart>(new ProductAddedCart() { CartProduct = cartProduct });
         }
+
+        public virtual void RemoveItem(OrderItem orderItem)
+        {
+            var itemExisted = OrderItems.Find(i => i.ItemId == orderItem.ItemId);
+            if (itemExisted != null)
+                OrderItems.Remove(orderItem);
+            else
+                throw new DomainException($"Order {Id} does not have any items with Id {orderItem.ItemId}");
+        }
+
+
     }
 }

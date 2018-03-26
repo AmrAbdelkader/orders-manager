@@ -77,6 +77,37 @@ namespace OrdersManager.Web.Controllers
             }
         }
 
+        
+        [HttpPut("{orderId}")]
+        [ValidateModel]
+        public async Task<ActionResult> RemoveItem(Guid orderId, [FromBody]OrderItemDto orderItemDto)
+        {
+            try
+            {
+                var updatedOrder = await _orderService.RemoveItem(orderId, orderItemDto);
+                return Ok(updatedOrder);
+            }
+            catch (ServiceException exc)
+            {
+                return NotFound(exc.Message);
+            }
+        }
+
+        [HttpPut("{orderId}")]
+        [ValidateModel]
+        public async Task<ActionResult> ClearAll(Guid orderId, [FromBody]OrderItemDto orderItemDto)
+        {
+            try
+            {
+                var updatedOrder = await _orderService.RemoveItem(orderId, orderItemDto);
+                return Ok(updatedOrder);
+            }
+            catch (ServiceException exc)
+            {
+                return NotFound(exc.Message);
+            }
+        }
+
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public void Delete(int id)

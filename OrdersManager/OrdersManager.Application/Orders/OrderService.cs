@@ -77,5 +77,30 @@ namespace OrdersManager.Application.Orders
         {
             throw new NotImplementedException();
         }
+
+        public async Task<OrderDto> RemoveItem(Guid orderId, OrderItemDto orderItemDto)
+        {
+            OrderDto orderDto = null;
+
+            Order order = await orderRepository.FindOne(new OrderSpec(orderId));
+            if (order == null)
+                throw new ServiceException($"Order with Id {orderId} does not exist.");
+
+            Item item = await itemRepository.FindById(orderItemDto.ItemId);
+            if (item == null)
+                throw new ServiceException($"Item with Id {orderItemDto.ItemId} does not exist.");
+            try
+            {
+                order.RemoveItem(Mapper.Map<OrderItem>(orderItemDto));
+            }
+            catch (DomainException exc)
+            {
+                throw new ServiceException(exc.Message);
+            }
+
+            orderDto = Mapper.Map<Order, OrderDto>(order);
+            unitOfWork.Commit();
+            return orderDto;
+        }
     }
 }
