@@ -62,7 +62,7 @@ namespace OrdersManager.Web.Controllers
         }
 
         // PUT: api/Orders/5
-        [HttpPut("{orderId}")]
+        [HttpPut("{orderId}/items")]
         [ValidateModel]
         public async Task<ActionResult> Put(Guid orderId, [FromBody]OrderItemDto orderItemDto)
         {
@@ -77,14 +77,12 @@ namespace OrdersManager.Web.Controllers
             }
         }
 
-        
-        [HttpPut("{orderId}")]
-        [ValidateModel]
-        public async Task<ActionResult> RemoveItem(Guid orderId, [FromBody]OrderItemDto orderItemDto)
+        [HttpDelete("{orderId}/items/{itemId}")]
+        public async Task<ActionResult> Delete(Guid orderId, Guid itemId)
         {
             try
             {
-                var updatedOrder = await _orderService.RemoveItem(orderId, orderItemDto);
+                var updatedOrder = await _orderService.RemoveItem(orderId, itemId);
                 return Ok(updatedOrder);
             }
             catch (ServiceException exc)
@@ -93,14 +91,13 @@ namespace OrdersManager.Web.Controllers
             }
         }
 
-        [HttpPut("{orderId}")]
-        [ValidateModel]
-        public async Task<ActionResult> ClearAll(Guid orderId, [FromBody]OrderItemDto orderItemDto)
+        [HttpDelete("{orderId}/items")]
+        public async Task<ActionResult> Delete(Guid orderId)
         {
             try
             {
-                var updatedOrder = await _orderService.RemoveItem(orderId, orderItemDto);
-                return Ok(updatedOrder);
+                await _orderService.Clear(orderId);
+                return NoContent();
             }
             catch (ServiceException exc)
             {
@@ -109,9 +106,10 @@ namespace OrdersManager.Web.Controllers
         }
 
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("{orderId}")]
+        public void Delete(int orderId)
         {
+
         }
     }
 }

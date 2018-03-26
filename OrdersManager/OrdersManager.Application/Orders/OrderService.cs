@@ -72,13 +72,8 @@ namespace OrdersManager.Application.Orders
 
             return Mapper.Map<OrderDto>(order);
         }
-
-        public virtual OrderDto Remove(Guid customerId, Guid productId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<OrderDto> RemoveItem(Guid orderId, OrderItemDto orderItemDto)
+        
+        public async Task<OrderDto> RemoveItem(Guid orderId, Guid ItemId)
         {
             OrderDto orderDto = null;
 
@@ -86,12 +81,13 @@ namespace OrdersManager.Application.Orders
             if (order == null)
                 throw new ServiceException($"Order with Id {orderId} does not exist.");
 
-            Item item = await itemRepository.FindById(orderItemDto.ItemId);
+            Item item = await itemRepository.FindById(ItemId);
             if (item == null)
-                throw new ServiceException($"Item with Id {orderItemDto.ItemId} does not exist.");
+                throw new ServiceException($"Item with Id {ItemId} does not exist.");
+
             try
             {
-                order.RemoveItem(Mapper.Map<OrderItem>(orderItemDto));
+                order.RemoveItem(ItemId);
             }
             catch (DomainException exc)
             {
@@ -101,6 +97,15 @@ namespace OrdersManager.Application.Orders
             orderDto = Mapper.Map<Order, OrderDto>(order);
             unitOfWork.Commit();
             return orderDto;
+        }
+
+        public async Task Clear(Guid OrderId)
+        {
+            Order order = await orderRepository.FindById(OrderId);
+            if (order == null)
+                throw new ServiceException($"Order with Id {OrderId} does not exist.");
+            order.Clear();
+            unitOfWork.Commit();
         }
     }
 }
