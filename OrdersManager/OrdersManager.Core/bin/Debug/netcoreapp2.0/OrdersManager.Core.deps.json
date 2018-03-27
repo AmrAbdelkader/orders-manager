@@ -9,7 +9,8 @@
       "OrdersManager.Core/1.0.0": {
         "dependencies": {
           "System.Reactive": "3.1.1",
-          "System.Reactive.Core": "3.1.1"
+          "System.Reactive.Core": "3.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0.0"
         },
         "runtime": {
           "OrdersManager.Core.dll": {}
@@ -259,6 +260,11 @@
           "System.Runtime": "4.1.0",
           "System.Runtime.Handles": "4.0.1"
         }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.0.0.0": {
+        "runtime": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
       }
     }
   },
@@ -498,6 +504,11 @@
       "sha512": "sha512-IMXgB5Vf/5Qw1kpoVgJMOvUO1l32aC+qC3OaIZjWJOjvcxuxNWOK2ZTWWYXfij22NHxT2j1yWX5vlAeQWld9vA==",
       "path": "system.threading.threadpool/4.0.10",
       "hashPath": "system.threading.threadpool.4.0.10.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/2.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

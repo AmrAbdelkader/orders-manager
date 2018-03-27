@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace OrdersManager.Core.Domain
 {
@@ -19,7 +18,5 @@ namespace OrdersManager.Core.Domain
             this.Created = DateTime.Now;
             this.Args = new Dictionary<string, Object>();
         }
-
-        public abstract void Flatten();
     }
 }

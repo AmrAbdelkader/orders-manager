@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OrdersManager.Infrastructure
 {
-    public class MemoryRepository<TEntity> : IRepository<TEntity>
+    public class MemoryRepository<TEntity> : IDomainEventRepository<TEntity>
         where TEntity : IAggregateRoot
     {
         protected static List<TEntity> entities = new List<TEntity>();

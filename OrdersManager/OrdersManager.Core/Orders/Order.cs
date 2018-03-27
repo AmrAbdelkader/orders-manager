@@ -13,7 +13,6 @@ namespace OrdersManager.Core.Orders
         public virtual Guid Id { get; protected set; }
         public virtual Guid CustomerId { get; protected set; }
         public virtual DateTime Created { get; protected set; }
-
         private List<OrderItem> OrderItems = new List<OrderItem>();
 
         public virtual ReadOnlyCollection<OrderItem> Items
@@ -33,7 +32,7 @@ namespace OrdersManager.Core.Orders
                 Created = DateTime.Now
             };
 
-            //DomainEvents.Raise<OrderCreated>(new OrderCreated() { Order = order });
+            DomainEvents.Raise(new OrderCreated() { Order = order });
 
             return order;
         }
@@ -59,7 +58,7 @@ namespace OrdersManager.Core.Orders
             else
                 OrderItems.Add(orderItem);
 
-            //DomainEvents.Raise<ProductAddedCart>(new ProductAddedCart() { CartProduct = cartProduct });
+            DomainEvents.Raise(new OrderItemAdded() { _OrderItem = existingOrderItem });
         }
 
         public virtual void RemoveItem(Guid ItemId)
@@ -69,6 +68,8 @@ namespace OrdersManager.Core.Orders
                 OrderItems.Remove(ItemToDelete);
             else
                 throw new DomainException($"Order {Id} does not have any items with Id {ItemId}");
+
+            DomainEvents.Raise(new OrderItemRemoved() { _OrderItem =  ItemToDelete});
         }
 
         public virtual void Clear()

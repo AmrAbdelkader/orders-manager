@@ -16,7 +16,7 @@ namespace OrdersManager.Tests.RepositoryTests
 
         Guid OrderId = new Guid("2143d854-0982-44b5-9c5d-acfaf3b7236a");
         Guid CustomerId = new Guid("c7daa440-096e-448b-ae45-d71268078225");
-        IRepository<Order> _orderRepo;
+        IDomainEventRepository<Order> _orderRepo;
 
 
         [SetUp]

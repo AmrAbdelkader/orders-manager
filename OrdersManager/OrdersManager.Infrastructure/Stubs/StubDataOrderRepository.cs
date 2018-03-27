@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OrdersManager.Infrastructure.Stubs
 {
-    public class StubDataOrderRepository : IRepository<Order>
+    public class StubDataOrderRepository : IDomainEventRepository<Order>
     {
         private readonly MemoryRepository<Order> memRepository;
 

@@ -1,20 +1,47 @@
-﻿using System;
-using System.Reactive.Subjects;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Collections.Generic;
 
 namespace OrdersManager.Core.Domain
 {
-    public class DomainEvents<TDomainObject> where TDomainObject : IAggregateRoot
+    public static class DomainEvents
     {
-        private Subject<TDomainObject> planeSpotted = new Subject<TDomainObject>();
+        [ThreadStatic] //so that each thread has its own callbacks
+        private static List<Delegate> actions;
 
-        public IObservable<TDomainObject> PlaneSpotted
+        private static IServiceProvider Container;
+
+        public static void Init(IServiceProvider container)
         {
-            get { return planeSpotted; }
+            Container = container;
         }
 
-        public void SpotPlane(TDomainObject Tobj)
+        //Registers a callback for the given domain event, used for testing only
+        public static void Register<T>(Action<T> callback) where T : DomainEvent
         {
-            this.planeSpotted.OnNext(Tobj);
+            if (actions == null)
+                actions = new List<Delegate>();
+
+            actions.Add(callback);
+        }
+
+        //Clears callbacks passed to Register on the current thread
+        public static void ClearCallbacks()
+        {
+            actions = null;
+        }
+
+        //Raises the given domain event
+        public static void Raise<T>(T args) where T : DomainEvent
+        {
+            if (Container != null)
+                foreach (var handler in Container.GetServices<IHandles<T>>())
+                    handler.Handle(args);
+
+            if (actions != null)
+                foreach (var action in actions)
+                    if (action is Action<T>)
+                        ((Action<T>)action)(args);
         }
     }
 }

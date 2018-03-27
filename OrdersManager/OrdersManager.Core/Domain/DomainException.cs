@@ -1,9 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace OrdersManager.Core.Domain
 {
+    /// <summary>
+    /// A custom Business domain exception that should be thrown whenever certain 
+    /// business scenario was violated
+    /// </summary>
+    /// <seealso cref="System.Exception" />
     public class DomainException : Exception
     {
         public DomainException()

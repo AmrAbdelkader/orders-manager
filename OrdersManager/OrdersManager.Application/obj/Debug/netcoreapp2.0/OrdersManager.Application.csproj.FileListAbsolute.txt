@@ -10,3 +10,5 @@ C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersMan
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Application\obj\Debug\netcoreapp2.0\OrdersManager.Application.csproj.CopyComplete
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Application\obj\Debug\netcoreapp2.0\OrdersManager.Application.dll
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Application\obj\Debug\netcoreapp2.0\OrdersManager.Application.pdb
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Application\bin\Debug\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Application\bin\Debug\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.Abstractions.xml

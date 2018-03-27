@@ -17,11 +17,11 @@ namespace OrdersManager.IoC
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services)
         {
             services.AddSingleton<IUnitOfWork, MemoryUnitOfWork>();
-            services.AddSingleton(typeof(IRepository<>), typeof(MemoryRepository<>));
+            services.AddSingleton(typeof(IDomainEventRepository<>), typeof(MemoryRepository<>));
             services.AddSingleton(typeof(MemoryRepository<>), typeof(MemoryRepository<>));
-            services.AddSingleton<IRepository<User>, StubDataUserRepository>();
-            services.AddSingleton<IRepository<Order>, StubDataOrderRepository>();
-            services.AddSingleton<IRepository<Item>, StubDataItemRepository>();
+            services.AddSingleton<IDomainEventRepository<User>, StubDataUserRepository>();
+            services.AddSingleton<IDomainEventRepository<Order>, StubDataOrderRepository>();
+            services.AddSingleton<IDomainEventRepository<Item>, StubDataItemRepository>();
             
             return services;
         }

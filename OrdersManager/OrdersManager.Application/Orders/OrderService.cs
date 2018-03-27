@@ -14,13 +14,13 @@ namespace OrdersManager.Application.Orders
 {
     public class OrderService : IOrderService
     {
-        IRepository<User> userRepository;
-        IRepository<Item> itemRepository;
-        IRepository<Order> orderRepository;
+        IDomainEventRepository<User> userRepository;
+        IDomainEventRepository<Item> itemRepository;
+        IDomainEventRepository<Order> orderRepository;
         IUnitOfWork unitOfWork;
 
-        public OrderService(IUnitOfWork unitOfWork, IRepository<User> userRepository,
-            IRepository<Item> itemRepository, IRepository<Order> orderRepository)
+        public OrderService(IUnitOfWork unitOfWork, IDomainEventRepository<User> userRepository,
+            IDomainEventRepository<Item> itemRepository, IDomainEventRepository<Order> orderRepository)
         {
             this.unitOfWork = unitOfWork;
             this.userRepository = userRepository;
@@ -72,8 +72,14 @@ namespace OrdersManager.Application.Orders
 
             return Mapper.Map<OrderDto>(order);
         }
-        
-        public async Task<OrderDto> RemoveItem(Guid orderId, Guid ItemId)
+
+        public virtual async Task<IEnumerable<OrderDto>> Get()
+        {
+            var ordersList = await orderRepository.Find(new OrdersListSpec());
+            return Mapper.Map<IEnumerable<OrderDto>>(ordersList);
+        }
+
+        public virtual async Task<OrderDto> RemoveItem(Guid orderId, Guid ItemId)
         {
             OrderDto orderDto = null;
 
@@ -99,12 +105,22 @@ namespace OrdersManager.Application.Orders
             return orderDto;
         }
 
-        public async Task Clear(Guid OrderId)
+        public virtual async Task Clear(Guid OrderId)
         {
             Order order = await orderRepository.FindById(OrderId);
             if (order == null)
                 throw new ServiceException($"Order with Id {OrderId} does not exist.");
             order.Clear();
+            unitOfWork.Commit();
+        }
+
+        public virtual async Task Delete(Guid OrderId)
+        {
+            Order order = await orderRepository.FindById(OrderId);
+            if (order == null)
+                throw new ServiceException($"Order with Id {OrderId} does not exist.");
+
+            await orderRepository.Remove(order);
             unitOfWork.Commit();
         }
     }

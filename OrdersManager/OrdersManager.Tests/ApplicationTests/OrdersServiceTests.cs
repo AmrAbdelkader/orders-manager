@@ -19,9 +19,9 @@ namespace OrdersManager.Tests.ApplicationTests
     public class OrdersServiceTests
     {
         Mock<IUnitOfWork> _uow;
-        Mock<IRepository<User>> _UserRepo;
-        Mock<IRepository<Order>> _OrderRepo;
-        Mock<IRepository<Item>> _ItemRepo;
+        Mock<IDomainEventRepository<User>> _UserRepo;
+        Mock<IDomainEventRepository<Order>> _OrderRepo;
+        Mock<IDomainEventRepository<Item>> _ItemRepo;
         Guid OrderId = new Guid("2143d854-0982-44b5-9c5d-acfaf3b7236a");
         Guid CustomerId = new Guid("c7daa440-096e-448b-ae45-d71268078225");
 
@@ -29,9 +29,9 @@ namespace OrdersManager.Tests.ApplicationTests
         public void TestInit()
         {
             _uow = new Mock<IUnitOfWork>();
-            _UserRepo = new Mock<IRepository<User>>();
-            _OrderRepo = new Mock<IRepository<Order>>();
-            _ItemRepo = new Mock<IRepository<Item>>();
+            _UserRepo = new Mock<IDomainEventRepository<User>>();
+            _OrderRepo = new Mock<IDomainEventRepository<Order>>();
+            _ItemRepo = new Mock<IDomainEventRepository<Item>>();
 
             var mappings = new MapperConfigurationExpression();
             mappings.AddProfile<ApplicationMapperProfile>();

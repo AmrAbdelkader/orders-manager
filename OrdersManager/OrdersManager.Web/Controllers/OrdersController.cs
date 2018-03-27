@@ -25,9 +25,17 @@ namespace OrdersManager.Web.Controllers
 
         // GET: api/Orders
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<ActionResult> Get()
         {
-            return new string[] { "value1", "value2" };
+            try
+            {
+                var orderList = await _orderService.Get();
+                return Ok(orderList);
+            }
+            catch (ServiceException exc)
+            {
+                return NotFound(exc.Message);
+            }
         }
 
         // GET: api/Orders/5
@@ -91,8 +99,8 @@ namespace OrdersManager.Web.Controllers
             }
         }
 
-        [HttpDelete("{orderId}/items")]
-        public async Task<ActionResult> Delete(Guid orderId)
+        [HttpPatch("{orderId}/items")]
+        public async Task<ActionResult> Patch(Guid orderId)
         {
             try
             {
@@ -107,9 +115,17 @@ namespace OrdersManager.Web.Controllers
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{orderId}")]
-        public void Delete(int orderId)
+        public async Task<ActionResult> Delete(Guid orderId)
         {
-
+            try
+            {
+                await _orderService.Delete(orderId);
+                return NoContent();
+            }
+            catch (ServiceException exc)
+            {
+                return NotFound(exc.Message);
+            }
         }
     }
 }

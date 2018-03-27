@@ -36,7 +36,8 @@ namespace OrdersManager.Core.Users
                 LastName = lastname,
                 Email = email
             };
-            //DomainEvents.Raise<CustomerCreated>(new CustomerCreated() { Customer = customer });
+            DomainEvents.Raise<UserCreated>(new UserCreated() { _User = customer });
+
             return customer;
         }
     }
