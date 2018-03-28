@@ -7,27 +7,55 @@ using OrdersManager.Core.Orders;
 using OrdersManager.Core.Users;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace OrdersManager.Application.Orders
 {
+    /// <summary>
+    /// OrderService implements IOrderService interface
+    /// </summary>
+    /// <seealso cref="OrdersManager.Application.Orders.IOrderService" />
     public class OrderService : IOrderService
     {
-        IDomainEventRepository<User> userRepository;
-        IDomainEventRepository<Item> itemRepository;
-        IDomainEventRepository<Order> orderRepository;
+        /// <summary>
+        /// The user repository
+        /// </summary>
+        IRepository<User> userRepository;
+        /// <summary>
+        /// The item repository
+        /// </summary>
+        IRepository<Item> itemRepository;
+        /// <summary>
+        /// The order repository
+        /// </summary>
+        IRepository<Order> orderRepository;
+        /// <summary>
+        /// The unit of work
+        /// </summary>
         IUnitOfWork unitOfWork;
 
-        public OrderService(IUnitOfWork unitOfWork, IDomainEventRepository<User> userRepository,
-            IDomainEventRepository<Item> itemRepository, IDomainEventRepository<Order> orderRepository)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderService"/> class.
+        /// </summary>
+        /// <param name="unitOfWork">The unit of work.</param>
+        /// <param name="userRepository">The user repository.</param>
+        /// <param name="itemRepository">The item repository.</param>
+        /// <param name="orderRepository">The order repository.</param>
+        public OrderService(IUnitOfWork unitOfWork, IRepository<User> userRepository,
+            IRepository<Item> itemRepository, IRepository<Order> orderRepository)
         {
             this.unitOfWork = unitOfWork;
             this.userRepository = userRepository;
             this.itemRepository = itemRepository;
             this.orderRepository = orderRepository;
         }
-        
+
+        /// <summary>
+        /// Creates the specified order dto.
+        /// </summary>
+        /// <param name="orderDto">The order dto.</param>
+        /// <returns></returns>
+        /// <exception cref="OrdersManager.Application.Exceptions.ServiceException"></exception>
         public virtual async Task<OrderDto> Create(OrderDto orderDto)
         {
             User customer = await userRepository.FindById(orderDto.CustomerId);
@@ -39,6 +67,14 @@ namespace OrdersManager.Application.Orders
             return Mapper.Map<OrderDto>(newOrder);
         }
 
+        /// <summary>
+        /// Adds the item.
+        /// </summary>
+        /// <param name="OrderId">The order identifier.</param>
+        /// <param name="orderItemDto">The order item dto.</param>
+        /// <returns></returns>
+        /// <exception cref="OrdersManager.Application.Exceptions.ServiceException">
+        /// </exception>
         public virtual async Task<OrderDto> AddItem(Guid OrderId, OrderItemDto orderItemDto)
         {
             OrderDto orderDto = null;
@@ -64,6 +100,12 @@ namespace OrdersManager.Application.Orders
             return orderDto;
         }
 
+        /// <summary>
+        /// Gets the specified order identifier.
+        /// </summary>
+        /// <param name="OrderId">The order identifier.</param>
+        /// <returns></returns>
+        /// <exception cref="OrdersManager.Application.Exceptions.ServiceException"></exception>
         public virtual async Task<OrderDto> Get(Guid OrderId)
         {
             Order order = await orderRepository.FindById(OrderId);
@@ -73,12 +115,24 @@ namespace OrdersManager.Application.Orders
             return Mapper.Map<OrderDto>(order);
         }
 
+        /// <summary>
+        /// Gets all orders.
+        /// </summary>
+        /// <returns></returns>
         public virtual async Task<IEnumerable<OrderDto>> Get()
         {
             var ordersList = await orderRepository.Find(new OrdersListSpec());
             return Mapper.Map<IEnumerable<OrderDto>>(ordersList);
         }
 
+        /// <summary>
+        /// Removes the item.
+        /// </summary>
+        /// <param name="orderId">The order identifier.</param>
+        /// <param name="ItemId">The item identifier.</param>
+        /// <returns></returns>
+        /// <exception cref="OrdersManager.Application.Exceptions.ServiceException">
+        /// </exception>
         public virtual async Task<OrderDto> RemoveItem(Guid orderId, Guid ItemId)
         {
             OrderDto orderDto = null;
@@ -105,6 +159,12 @@ namespace OrdersManager.Application.Orders
             return orderDto;
         }
 
+        /// <summary>
+        /// Clears the specified order items.
+        /// </summary>
+        /// <param name="OrderId">The order identifier.</param>
+        /// <returns></returns>
+        /// <exception cref="OrdersManager.Application.Exceptions.ServiceException"></exception>
         public virtual async Task Clear(Guid OrderId)
         {
             Order order = await orderRepository.FindById(OrderId);
@@ -114,6 +174,12 @@ namespace OrdersManager.Application.Orders
             unitOfWork.Commit();
         }
 
+        /// <summary>
+        /// Deletes the specified order identifier.
+        /// </summary>
+        /// <param name="OrderId">The order identifier.</param>
+        /// <returns></returns>
+        /// <exception cref="OrdersManager.Application.Exceptions.ServiceException"></exception>
         public virtual async Task Delete(Guid OrderId)
         {
             Order order = await orderRepository.FindById(OrderId);

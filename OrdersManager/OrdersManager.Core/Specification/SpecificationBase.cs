@@ -29,6 +29,13 @@ namespace OrdersManager.Core.Specification
         /// </value>
         public abstract Expression<Func<T, bool>> SpecExpression { get; }
 
+        /// <summary>
+        /// Determines whether [is satisfied by] [the specified object].
+        /// </summary>
+        /// <param name="obj">The object.</param>
+        /// <returns>
+        /// <c>true</c> if [is satisfied by] [the specified object]; otherwise, <c>false</c>.
+        /// </returns>
         public bool IsSatisfiedBy(T obj)
         {
             return CompiledExpression(obj);

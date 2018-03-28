@@ -1,19 +1,19 @@
 ﻿using OrdersManager.Core.Domain;
 
-namespace OrdersManager.Core.Orders
+namespace OrdersManager.Core.Items
 {
     /// <summary>
-    /// OrderCreated Event arguments
+    /// ItemCreated event's data
     /// </summary>
     /// <seealso cref="OrdersManager.Core.Domain.DomainEvent" />
-    public class OrderCreated : DomainEvent
+    public class ItemCreated : DomainEvent
     {
         /// <summary>
-        /// Gets or sets the order.
+        /// Gets or sets the item.
         /// </summary>
         /// <value>
-        /// The order.
+        /// The item.
         /// </value>
-        public Order Order { get; set; }
+        public Item Item { get; set; }
     }
 }

@@ -4,19 +4,37 @@ using System.Collections.Generic;
 
 namespace OrdersManager.Core.Domain
 {
+    /// <summary>
+    /// Domain events responsible for registering and raising events
+    /// </summary>
     public static class DomainEvents
     {
-        [ThreadStatic] //so that each thread has its own callbacks
+        /// <summary>
+        /// The actions
+        /// </summary>
+        [ThreadStatic]
         private static List<Delegate> actions;
 
+        /// <summary>
+        /// The container
+        /// </summary>
         private static IServiceProvider Container;
 
+        /// <summary>
+        /// Initializes the specified container.
+        /// </summary>
+        /// <param name="container">The container.</param>
         public static void Init(IServiceProvider container)
         {
             Container = container;
         }
 
         //Registers a callback for the given domain event, used for testing only
+        /// <summary>
+        /// Registers the specified callback.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="callback">The callback.</param>
         public static void Register<T>(Action<T> callback) where T : DomainEvent
         {
             if (actions == null)
@@ -26,12 +44,20 @@ namespace OrdersManager.Core.Domain
         }
 
         //Clears callbacks passed to Register on the current thread
+        /// <summary>
+        /// Clears the callbacks.
+        /// </summary>
         public static void ClearCallbacks()
         {
             actions = null;
         }
 
         //Raises the given domain event
+        /// <summary>
+        /// Raises the specified arguments.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="args">The arguments.</param>
         public static void Raise<T>(T args) where T : DomainEvent
         {
             if (Container != null)

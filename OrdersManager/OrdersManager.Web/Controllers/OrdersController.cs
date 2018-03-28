@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using OrdersManager.Application.Exceptions;
 using OrdersManager.Application.Orders;
 using OrdersManager.Web.Filters;
+using System;
+using System.Threading.Tasks;
 
 namespace OrdersManager.Web.Controllers
 {

@@ -3,9 +3,9 @@
 namespace OrdersManager.Application.Orders
 {
     /// <summary>
-    /// OrderItemDTO OrderItem Data transfer object
+    /// OrderItem Output data
     /// </summary>
-    public class OrderItemDto
+    public class OrderItemOutputModel
     {
         /// <summary>
         /// Gets or sets the item identifier.
@@ -14,6 +14,13 @@ namespace OrdersManager.Application.Orders
         /// The item identifier.
         /// </value>
         public Guid ItemId { get; set; }
+        /// <summary>
+        /// Gets or sets the name.
+        /// </summary>
+        /// <value>
+        /// The name.
+        /// </value>
+        public string Name { get; set; }
         /// <summary>
         /// Gets or sets the quantity.
         /// </summary>
