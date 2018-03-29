@@ -5734,6 +5734,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
           "System.Reactive": "3.1.1",
           "System.Reactive.Core": "3.1.1"
         },
@@ -5757,20 +5758,6 @@
           "bin/placeholder/OrdersManager.Infrastructure.dll": {}
         }
       },
-      "OrdersManager.IoC/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
-        "dependencies": {
-          "OrdersManager.Application": "1.0.0",
-          "OrdersManager.Infrastructure": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/OrdersManager.IoC.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OrdersManager.IoC.dll": {}
-        }
-      },
       "OrdersManager.Web/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
@@ -5779,7 +5766,9 @@
           "Microsoft.AspNetCore.All": "2.0.5",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.2",
-          "OrdersManager.IoC": "1.0.0",
+          "OrdersManager.Application": "1.0.0",
+          "OrdersManager.Core": "1.0.0",
+          "OrdersManager.Infrastructure": "1.0.0",
           "Swashbuckle.AspNetCore": "2.3.0",
           "system.reactive": "3.1.1"
         },
@@ -11716,7 +11705,7 @@
       ]
     },
     "System.Linq.Queryable/4.3.0": {
-      "sha512": "In1Bmmvl/j52yPu3xgakQSI0YIckPUr870w4K5+Lak3JCCa8hl+my65lABOuKfYs4ugmZy25ScFerC4nz8+b6g==",
+      "sha512": "iAyxEEZKjINanje5yt+wwBzyz9ZcIBpABL9axx69CEOdHqoliO+g98ejNb3DVnaP6UryFXmlik35mXatc5uwgg==",
       "type": "package",
       "path": "system.linq.queryable/4.3.0",
       "files": [
@@ -14868,11 +14857,6 @@
       "path": "../OrdersManager.Infrastructure/OrdersManager.Infrastructure.csproj",
       "msbuildProject": "../OrdersManager.Infrastructure/OrdersManager.Infrastructure.csproj"
     },
-    "OrdersManager.IoC/1.0.0": {
-      "type": "project",
-      "path": "../OrdersManager.IoC/OrdersManager.IoC.csproj",
-      "msbuildProject": "../OrdersManager.IoC/OrdersManager.IoC.csproj"
-    },
     "OrdersManager.Web/1.0.0": {
       "type": "project",
       "path": "../OrdersManager.Web/OrdersManager.Web.csproj",
@@ -14894,27 +14878,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Amr Abdelkader\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Users\\aabdelkader\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Amr Abdelkader\\Documents\\Checkout\\OrdersManager\\OrdersManager\\OrdersManager.Tests\\OrdersManager.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\aabdelkader\\Source\\repos\\DDD-Example\\orders-manager\\OrdersManager\\OrdersManager.Tests\\OrdersManager.Tests.csproj",
       "projectName": "OrdersManager.Tests",
-      "projectPath": "C:\\Users\\Amr Abdelkader\\Documents\\Checkout\\OrdersManager\\OrdersManager\\OrdersManager.Tests\\OrdersManager.Tests.csproj",
-      "packagesPath": "C:\\Users\\Amr Abdelkader\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Amr Abdelkader\\Documents\\Checkout\\OrdersManager\\OrdersManager\\OrdersManager.Tests\\obj\\",
+      "projectPath": "C:\\Users\\aabdelkader\\Source\\repos\\DDD-Example\\orders-manager\\OrdersManager\\OrdersManager.Tests\\OrdersManager.Tests.csproj",
+      "packagesPath": "C:\\Users\\aabdelkader\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\aabdelkader\\Source\\repos\\DDD-Example\\orders-manager\\OrdersManager\\OrdersManager.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Amr Abdelkader\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\aabdelkader\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -14926,14 +14907,14 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\Amr Abdelkader\\Documents\\Checkout\\OrdersManager\\OrdersManager\\OrdersManager.Application\\OrdersManager.Application.csproj": {
-              "projectPath": "C:\\Users\\Amr Abdelkader\\Documents\\Checkout\\OrdersManager\\OrdersManager\\OrdersManager.Application\\OrdersManager.Application.csproj"
+            "C:\\Users\\aabdelkader\\Source\\repos\\DDD-Example\\orders-manager\\OrdersManager\\OrdersManager.Application\\OrdersManager.Application.csproj": {
+              "projectPath": "C:\\Users\\aabdelkader\\Source\\repos\\DDD-Example\\orders-manager\\OrdersManager\\OrdersManager.Application\\OrdersManager.Application.csproj"
             },
-            "C:\\Users\\Amr Abdelkader\\Documents\\Checkout\\OrdersManager\\OrdersManager\\OrdersManager.Core\\OrdersManager.Core.csproj": {
-              "projectPath": "C:\\Users\\Amr Abdelkader\\Documents\\Checkout\\OrdersManager\\OrdersManager\\OrdersManager.Core\\OrdersManager.Core.csproj"
+            "C:\\Users\\aabdelkader\\Source\\repos\\DDD-Example\\orders-manager\\OrdersManager\\OrdersManager.Core\\OrdersManager.Core.csproj": {
+              "projectPath": "C:\\Users\\aabdelkader\\Source\\repos\\DDD-Example\\orders-manager\\OrdersManager\\OrdersManager.Core\\OrdersManager.Core.csproj"
             },
-            "C:\\Users\\Amr Abdelkader\\Documents\\Checkout\\OrdersManager\\OrdersManager\\OrdersManager.Web\\OrdersManager.Web.csproj": {
-              "projectPath": "C:\\Users\\Amr Abdelkader\\Documents\\Checkout\\OrdersManager\\OrdersManager\\OrdersManager.Web\\OrdersManager.Web.csproj"
+            "C:\\Users\\aabdelkader\\Source\\repos\\DDD-Example\\orders-manager\\OrdersManager\\OrdersManager.Web\\OrdersManager.Web.csproj": {
+              "projectPath": "C:\\Users\\aabdelkader\\Source\\repos\\DDD-Example\\orders-manager\\OrdersManager\\OrdersManager.Web\\OrdersManager.Web.csproj"
             }
           }
         }

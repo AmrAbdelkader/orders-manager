@@ -27,3 +27,30 @@ C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersMan
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Web.pdb
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Infrastructure.pdb
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.IoC.pdb
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\NUnit3.TestAdapter.dll
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\NUnit3.TestAdapter.pdb
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\nunit.engine.netstandard.dll
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\Mono.Cecil.dll
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Tests.deps.json
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Tests.runtimeconfig.json
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Tests.runtimeconfig.dev.json
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Tests.dll
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Tests.pdb
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Application.dll
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Core.dll
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Infrastructure.dll
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Web.dll
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Application.pdb
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Core.pdb
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Web.pdb
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\bin\Debug\netcoreapp2.0\OrdersManager.Infrastructure.pdb
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\obj\Debug\netcoreapp2.0\OrdersManager.Tests.csprojResolveAssemblyReference.cache
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\obj\Debug\netcoreapp2.0\OrdersManager.Tests.csproj.CoreCompileInputs.cache
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\obj\Debug\netcoreapp2.0\OrdersManager.Tests.AssemblyInfoInputs.cache
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\obj\Debug\netcoreapp2.0\OrdersManager.Tests.AssemblyInfo.cs
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\obj\Debug\netcoreapp2.0\OrdersManager.Tests.csproj.CopyComplete
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\obj\Debug\netcoreapp2.0\OrdersManager.Tests.dll
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Tests\obj\Debug\netcoreapp2.0\OrdersManager.Tests.pdb

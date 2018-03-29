@@ -22,7 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OrdersManager.IoC\OrdersManager.IoC.csproj" />
+    <ProjectReference Include="..\OrdersManager.Application\OrdersManager.Application.csproj" />
+    <ProjectReference Include="..\OrdersManager.Core\OrdersManager.Core.csproj" />
+    <ProjectReference Include="..\OrdersManager.Infrastructure\OrdersManager.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

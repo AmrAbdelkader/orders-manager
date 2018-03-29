@@ -62,7 +62,9 @@ namespace OrdersManager.Core.Domain
         {
             if (Container != null)
                 foreach (var handler in Container.GetServices<IHandles<T>>())
+                {
                     handler.Handle(args);
+                }
 
             if (actions != null)
                 foreach (var action in actions)

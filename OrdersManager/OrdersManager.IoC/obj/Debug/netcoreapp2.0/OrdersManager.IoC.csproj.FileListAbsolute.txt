@@ -16,3 +16,9 @@ C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersMan
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.csproj.CopyComplete
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.dll
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.pdb
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.csprojResolveAssemblyReference.cache
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.csproj.CoreCompileInputs.cache
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.AssemblyInfoInputs.cache
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.AssemblyInfo.cs
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.dll
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.IoC\obj\Debug\netcoreapp2.0\OrdersManager.IoC.pdb
