@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using OrdersManager.IoC;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace OrdersManager.Web
 {
@@ -24,6 +25,27 @@ namespace OrdersManager.Web
             services.AddDomainServices();
             services.AddMvc();
             services.AddAutoMapper();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info
+                {
+                    Version = "v1",
+                    Title = "Orders Manager API",
+                    Description = "A prototype for basket management API",
+                    TermsOfService = "None",
+                    Contact = new Contact
+                    {
+                        Name = "Amr Elsayed",
+                        Email = "amr.elsayed.mo88@gmail.com",
+                        Url = "https://twitter.com/Amr_Abdelkader"
+                    },
+                    License = new License
+                    {
+                        Name = "Use under LICX",
+                        Url = "https://example.com/license"
+                    }
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +57,11 @@ namespace OrdersManager.Web
             }
 
             app.UseMvc();
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("http://localhost:58483/swagger/v1/swagger.json", "OrdersManager API V1");
+            });
         }
     }
 }

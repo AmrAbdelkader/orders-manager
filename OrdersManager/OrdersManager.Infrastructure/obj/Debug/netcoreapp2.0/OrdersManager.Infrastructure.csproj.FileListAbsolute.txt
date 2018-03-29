@@ -2,7 +2,9 @@ C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersMan
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Infrastructure\bin\Debug\netcoreapp2.0\OrdersManager.Infrastructure.dll
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Infrastructure\bin\Debug\netcoreapp2.0\OrdersManager.Infrastructure.pdb
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Infrastructure\bin\Debug\netcoreapp2.0\OrdersManager.Core.dll
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Infrastructure\bin\Debug\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Infrastructure\bin\Debug\netcoreapp2.0\OrdersManager.Core.pdb
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Infrastructure\bin\Debug\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.Abstractions.xml
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Infrastructure\obj\Debug\netcoreapp2.0\OrdersManager.Infrastructure.csprojResolveAssemblyReference.cache
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Infrastructure\obj\Debug\netcoreapp2.0\OrdersManager.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Infrastructure\obj\Debug\netcoreapp2.0\OrdersManager.Infrastructure.AssemblyInfoInputs.cache
@@ -10,5 +12,3 @@ C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersMan
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Infrastructure\obj\Debug\netcoreapp2.0\OrdersManager.Infrastructure.csproj.CopyComplete
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Infrastructure\obj\Debug\netcoreapp2.0\OrdersManager.Infrastructure.dll
 C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Infrastructure\obj\Debug\netcoreapp2.0\OrdersManager.Infrastructure.pdb
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Infrastructure\bin\Debug\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Infrastructure\bin\Debug\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.Abstractions.xml

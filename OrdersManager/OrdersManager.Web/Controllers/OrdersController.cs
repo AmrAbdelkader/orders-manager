@@ -3,6 +3,7 @@ using OrdersManager.Application.Exceptions;
 using OrdersManager.Application.Orders;
 using OrdersManager.Web.Filters;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace OrdersManager.Web.Controllers
@@ -20,6 +21,8 @@ namespace OrdersManager.Web.Controllers
 
         // GET: api/Orders
         [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<OrderDto>), 200)]
+        [ProducesResponseType(typeof(string), 404)]
         public async Task<ActionResult> Get()
         {
             try
@@ -35,6 +38,8 @@ namespace OrdersManager.Web.Controllers
 
         // GET: api/Orders/5
         [HttpGet("{id}", Name = "Get")]
+        [ProducesResponseType(typeof(OrderDto), 200)]
+        [ProducesResponseType(typeof(string), 404)]
         public async Task<ActionResult> Get(Guid id)
         {
             try
@@ -51,6 +56,9 @@ namespace OrdersManager.Web.Controllers
         // POST: api/Orders
         [HttpPost]
         [ValidateModel]
+        [ProducesResponseType(typeof(OrderDto), 200)]
+        [ProducesResponseType(typeof(string), 400)]
+        [ProducesResponseType(typeof(string), 404)]
         public async Task<ActionResult> Post([FromBody]OrderDto orderDto)
         {
             try
@@ -67,6 +75,9 @@ namespace OrdersManager.Web.Controllers
         // PUT: api/Orders/5
         [HttpPut("{orderId}/items")]
         [ValidateModel]
+        [ProducesResponseType(typeof(OrderDto), 200)]
+        [ProducesResponseType(typeof(string), 400)]
+        [ProducesResponseType(typeof(string), 404)]
         public async Task<ActionResult> Put(Guid orderId, [FromBody]OrderItemDto orderItemDto)
         {
             try
@@ -81,6 +92,8 @@ namespace OrdersManager.Web.Controllers
         }
 
         [HttpDelete("{orderId}/items/{itemId}")]
+        [ProducesResponseType(typeof(OrderDto), 200)]
+        [ProducesResponseType(typeof(string), 404)]
         public async Task<ActionResult> Delete(Guid orderId, Guid itemId)
         {
             try
@@ -95,6 +108,8 @@ namespace OrdersManager.Web.Controllers
         }
 
         [HttpPatch("{orderId}/items")]
+        [ProducesResponseType(typeof(void), 204)]
+        [ProducesResponseType(typeof(string), 404)]
         public async Task<ActionResult> Patch(Guid orderId)
         {
             try
@@ -110,6 +125,8 @@ namespace OrdersManager.Web.Controllers
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{orderId}")]
+        [ProducesResponseType(typeof(void), 204)]
+        [ProducesResponseType(typeof(string), 404)]
         public async Task<ActionResult> Delete(Guid orderId)
         {
             try
