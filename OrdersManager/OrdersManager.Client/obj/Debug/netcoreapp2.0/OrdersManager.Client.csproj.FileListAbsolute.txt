@@ -9,3 +9,4 @@ C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\Order
 C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Client\obj\Debug\netcoreapp2.0\OrdersManager.Client.dll
 C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Client\obj\Debug\netcoreapp2.0\OrdersManager.Client.pdb
 C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Client\obj\Debug\netcoreapp2.0\OrdersManager.Client.csprojResolveAssemblyReference.cache
+C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Client\bin\Debug\netcoreapp2.0\appsettings.json
