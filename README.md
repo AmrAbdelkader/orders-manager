@@ -11,23 +11,25 @@ After you checkout or download the code from the repository all you have to do i
 .Net Core
 
 ### Assumptions
-    * User Management Module is assumed to be isolated in an Identity Server or IAM Service.
-    * It is supposed to have some stored Items in our database
-    * As per the requirements the checkout functionality will be the responsibility of another team,
+
+* User Management Module is assumed to be isolated in an Identity Server or IAM Service.
+* It is supposed to have some stored Items in our database
+* As per the requirements the checkout functionality will be the responsibility of another team,
         and therefore this API has been developed with Domain Events in case you would like to listen to some certain events
         that you might be interested in like(ItemAdded, OrderCreated, and so on ...)
 
 ### Technologies and Patterns Used
-    * .Net Core
-    * Domain - Driven Design
-    * Domain captureEvents
-    * Dependency Injection
-    * SOLID Principles
-    * TDD and BDD
-    * Unit of work and Repository Patterns
-    * Web API
-    * Specification Pattern
-    * Swagger Documentation
+
+* .Net Core
+* Domain - Driven Design
+* Domain captureEvents
+* Dependency Injection
+* SOLID Principles
+* TDD and BDD
+* Unit of work and Repository Patterns
+* Web API
+* Specification Pattern
+* Swagger Documentation
 
 
 ### Web API documentation
