@@ -1,11 +1,11 @@
 # Orders Manager API
 
-This is a Web API project beta version for managing user orders, giving the users an easy and standard way to create orders,
+This is a Web API project beta version for managing user's orders, giving the users an easy and standard way to create orders,
 add, update or remove items from the order, clear all items and delete order.
 
 ## Getting Started
 
-After you checkout or download the code from the repository all you have to do is just build the solution, and run it over IIS Express.
+After you clone or download the code from the repository all you have to do is just build the solution, and run it over IIS Express.
 
 ### Prerequisites
 .Net Core
