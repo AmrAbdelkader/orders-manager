@@ -22,7 +22,7 @@ After you clone or download the code from the repository all you have to do is j
 
 * .Net Core
 * Domain - Driven Design
-* Domain captureEvents
+* Domain Events
 * Dependency Injection
 * SOLID Principles
 * TDD and BDD
