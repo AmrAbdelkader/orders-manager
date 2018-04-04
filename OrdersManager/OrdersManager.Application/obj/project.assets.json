@@ -2444,7 +2444,7 @@
       ]
     },
     "System.Linq.Queryable/4.3.0": {
-      "sha512": "iAyxEEZKjINanje5yt+wwBzyz9ZcIBpABL9axx69CEOdHqoliO+g98ejNb3DVnaP6UryFXmlik35mXatc5uwgg==",
+      "sha512": "In1Bmmvl/j52yPu3xgakQSI0YIckPUr870w4K5+Lak3JCCa8hl+my65lABOuKfYs4ugmZy25ScFerC4nz8+b6g==",
       "type": "package",
       "path": "system.linq.queryable/4.3.0",
       "files": [
@@ -3864,24 +3864,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aabdelkader\\.nuget\\packages\\": {},
+    "C:\\Users\\Amr Abdelkader\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aabdelkader\\Source\\repos\\DDD-Example\\orders-manager\\OrdersManager\\OrdersManager.Application\\OrdersManager.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Amr Abdelkader\\Documents\\Checkout\\OrdersManager\\OrdersManager\\OrdersManager.Application\\OrdersManager.Application.csproj",
       "projectName": "OrdersManager.Application",
-      "projectPath": "C:\\Users\\aabdelkader\\Source\\repos\\DDD-Example\\orders-manager\\OrdersManager\\OrdersManager.Application\\OrdersManager.Application.csproj",
-      "packagesPath": "C:\\Users\\aabdelkader\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aabdelkader\\Source\\repos\\DDD-Example\\orders-manager\\OrdersManager\\OrdersManager.Application\\obj\\",
+      "projectPath": "C:\\Users\\Amr Abdelkader\\Documents\\Checkout\\OrdersManager\\OrdersManager\\OrdersManager.Application\\OrdersManager.Application.csproj",
+      "packagesPath": "C:\\Users\\Amr Abdelkader\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Amr Abdelkader\\Documents\\Checkout\\OrdersManager\\OrdersManager\\OrdersManager.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\aabdelkader\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Amr Abdelkader\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -3893,8 +3896,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\aabdelkader\\Source\\repos\\DDD-Example\\orders-manager\\OrdersManager\\OrdersManager.Core\\OrdersManager.Core.csproj": {
-              "projectPath": "C:\\Users\\aabdelkader\\Source\\repos\\DDD-Example\\orders-manager\\OrdersManager\\OrdersManager.Core\\OrdersManager.Core.csproj"
+            "C:\\Users\\Amr Abdelkader\\Documents\\Checkout\\OrdersManager\\OrdersManager\\OrdersManager.Core\\OrdersManager.Core.csproj": {
+              "projectPath": "C:\\Users\\Amr Abdelkader\\Documents\\Checkout\\OrdersManager\\OrdersManager\\OrdersManager.Core\\OrdersManager.Core.csproj"
             }
           }
         }
