@@ -64,5 +64,9 @@ namespace Swagger.Models
         [JsonProperty(PropertyName = "modified")]
         public System.DateTime? Modified { get; set; }
 
+        /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "total")]
+        public System.Double Total { get; set; }
     }
 }

@@ -65,34 +65,42 @@ namespace OrdersManager.Tests.ControllersTests
             Assert.IsInstanceOf(typeof(OkObjectResult), actionResult);
 
             OkObjectResult result = actionResult as OkObjectResult;
-            List<string> messages = result.Value as List<string>;
-            Assert.IsNotNull(messages);
-
-            //Assert.AreEqual(HttpStatusCode.Accepted, negResult.StatusCode);
-            //Assert.AreEqual("some updated data", negResult.Content);
-
+            OrderDto orderData = result.Value as OrderDto;
+            Assert.IsNotNull(orderData);
         }
 
-        //[Test]
-        //[Category("ControllersTests")]
-        //public async Task RemoveItem_ValidExistinItem_ReturnsOk()
-        //{
-        //    //Arrange
-        //    OrderItemDto _orderDto = new OrderItemDto
-        //    {
-        //        ItemId = 
-        //    };
+        [Test]
+        public async Task RemoveItem_ValidExistinItem_ReturnsOk()
+        {
+            //Arrange
+            orderService.Setup(s => s.RemoveItem(OrderId, ItemId)).
+                ReturnsAsync(new OrderDto { Id = OrderId });
 
-        //    orderService.Setup(s => s.Remove(_orderDto)).ReturnsAsync(_orderDto);
+            OrdersController ordersController = new OrdersController(orderService.Object);
 
-        //    OrdersController ordersController = new OrdersController(orderService.Object);
+            //Act
+            var actionResult = await ordersController.Delete(OrderId, ItemId);
 
-        //    //Act
-        //    var actionResult = await ordersController.Post(_orderDto);
+            //Assert
+            Assert.IsNotNull(actionResult);
+            Assert.IsInstanceOf(typeof(OkObjectResult), actionResult);
+            OkObjectResult result = actionResult as OkObjectResult;
+            OrderDto orderData = result.Value as OrderDto;
+            Assert.IsNotNull(orderData);
+            Assert.IsNull(orderData.Items);
+        }
 
-        //    //Assert
-        //    Assert.IsNotNull(actionResult);
-        //    Assert.IsInstanceOf(typeof(CreatedResult), actionResult);
-        //}
+        [Test]
+        public async Task ClearOrder_WithValidOrder_ReturnsNoContent()
+        {
+            //Arrange
+            orderService.Setup(s => s.Clear(OrderId)).Returns(Task.CompletedTask);
+            OrdersController ordersController = new OrdersController(orderService.Object);
+            //Act
+            var actionResult = await ordersController.Patch(OrderId);
+            //Assert
+            Assert.IsNotNull(actionResult);
+            Assert.IsInstanceOf(typeof(NoContentResult), actionResult);
+        }
     }
 }
