@@ -10,3 +10,14 @@ C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\Order
 C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Client\obj\Debug\netcoreapp2.0\OrdersManager.Client.pdb
 C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Client\obj\Debug\netcoreapp2.0\OrdersManager.Client.csprojResolveAssemblyReference.cache
 C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Client\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Client\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Client\bin\Debug\netcoreapp2.0\OrdersManager.Client.deps.json
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Client\bin\Debug\netcoreapp2.0\OrdersManager.Client.runtimeconfig.json
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Client\bin\Debug\netcoreapp2.0\OrdersManager.Client.runtimeconfig.dev.json
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Client\bin\Debug\netcoreapp2.0\OrdersManager.Client.dll
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Client\bin\Debug\netcoreapp2.0\OrdersManager.Client.pdb
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Client\obj\Debug\netcoreapp2.0\OrdersManager.Client.csproj.CoreCompileInputs.cache
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Client\obj\Debug\netcoreapp2.0\OrdersManager.Client.AssemblyInfoInputs.cache
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Client\obj\Debug\netcoreapp2.0\OrdersManager.Client.AssemblyInfo.cs
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Client\obj\Debug\netcoreapp2.0\OrdersManager.Client.dll
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Client\obj\Debug\netcoreapp2.0\OrdersManager.Client.pdb

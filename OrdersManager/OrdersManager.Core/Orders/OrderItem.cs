@@ -29,6 +29,15 @@ namespace OrdersManager.Core.Orders
         /// The quantity.
         /// </value>
         public virtual int Quantity { get; set; }
+
+        /// <summary>
+        /// Gets or sets the cost.
+        /// </summary>
+        /// <value>
+        /// The cost.
+        /// </value>
+        public double Cost { get; set; }
+
         /// <summary>
         /// Gets or sets the created.
         /// </summary>
@@ -53,17 +62,12 @@ namespace OrdersManager.Core.Orders
         /// <returns></returns>
         public static OrderItem Create(Order order, Item item, int quantity)
         {
-            //if (order == null)
-            //    throw new ArgumentNullException("cart");
-
-            //if (item == null)
-            //    throw new ArgumentNullException("product");
-
             OrderItem orderItem = new OrderItem()
             {
                 OrderId = order.Id,
                 ItemId = item.Id,
                 Quantity = quantity,
+                Cost = item.Price,
                 Created = DateTime.Now
             };
 

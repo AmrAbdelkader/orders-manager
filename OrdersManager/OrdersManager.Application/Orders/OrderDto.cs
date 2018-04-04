@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace OrdersManager.Application.Orders
 {
@@ -21,6 +22,7 @@ namespace OrdersManager.Application.Orders
         /// <value>
         /// The customer identifier.
         /// </value>
+        [Required]
         public Guid CustomerId { get; set; }
         /// <summary>
         /// Gets or sets the items.
@@ -43,5 +45,13 @@ namespace OrdersManager.Application.Orders
         /// The modified.
         /// </value>
         public DateTime Modified { get; set; }
+
+        /// <summary>
+        /// Gets or sets the total.
+        /// </summary>
+        /// <value>
+        /// The total.
+        /// </value>
+        public double Total { get; set; }
     }
 }

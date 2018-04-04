@@ -80,12 +80,15 @@ namespace OrdersManager.Application.Orders
             OrderDto orderDto = null;
             
             Order order = await orderRepository.FindOne(new OrderSpec(OrderId));
+
             if (order == null)
                 throw new ServiceException($"Order with Id {OrderId} does not exist.");
 
             Item item = await itemRepository.FindById(orderItemDto.ItemId);
-            if(item == null)
+
+            if (item == null)
                 throw new ServiceException($"Item with Id {orderItemDto.ItemId} does not exist.");
+
             try
             {
                 order.AddItem(OrderItem.Create(order, item, orderItemDto.Quantity));

@@ -1,14 +1,3 @@
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\bin\Debug\netcoreapp2.0\OrdersManager.Core.deps.json
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\bin\Debug\netcoreapp2.0\OrdersManager.Core.dll
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\bin\Debug\netcoreapp2.0\OrdersManager.Core.pdb
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\bin\Debug\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\bin\Debug\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.Abstractions.xml
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\obj\Debug\netcoreapp2.0\OrdersManager.Core.csproj.CoreCompileInputs.cache
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\obj\Debug\netcoreapp2.0\OrdersManager.Core.AssemblyInfoInputs.cache
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\obj\Debug\netcoreapp2.0\OrdersManager.Core.AssemblyInfo.cs
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\obj\Debug\netcoreapp2.0\OrdersManager.Core.csproj.CopyComplete
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\obj\Debug\netcoreapp2.0\OrdersManager.Core.dll
-C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\obj\Debug\netcoreapp2.0\OrdersManager.Core.pdb
 C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Core\obj\Debug\netcoreapp2.0\OrdersManager.Core.csproj.CoreCompileInputs.cache
 C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Core\obj\Debug\netcoreapp2.0\OrdersManager.Core.AssemblyInfoInputs.cache
 C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Core\obj\Debug\netcoreapp2.0\OrdersManager.Core.AssemblyInfo.cs
@@ -18,3 +7,12 @@ C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\Order
 C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Core\bin\Debug\netcoreapp2.0\OrdersManager.Core.dll
 C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Core\bin\Debug\netcoreapp2.0\OrdersManager.Core.pdb
 C:\Users\aabdelkader\Source\repos\DDD-Example\orders-manager\OrdersManager\OrdersManager.Core\obj\Debug\netcoreapp2.0\OrdersManager.Core.csprojResolveAssemblyReference.cache
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\bin\Debug\netcoreapp2.0\OrdersManager.Core.deps.json
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\bin\Debug\netcoreapp2.0\OrdersManager.Core.dll
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\bin\Debug\netcoreapp2.0\OrdersManager.Core.pdb
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\obj\Debug\netcoreapp2.0\OrdersManager.Core.csprojResolveAssemblyReference.cache
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\obj\Debug\netcoreapp2.0\OrdersManager.Core.csproj.CoreCompileInputs.cache
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\obj\Debug\netcoreapp2.0\OrdersManager.Core.AssemblyInfoInputs.cache
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\obj\Debug\netcoreapp2.0\OrdersManager.Core.AssemblyInfo.cs
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\obj\Debug\netcoreapp2.0\OrdersManager.Core.dll
+C:\Users\Amr Abdelkader\Documents\Checkout\OrdersManager\OrdersManager\OrdersManager.Core\obj\Debug\netcoreapp2.0\OrdersManager.Core.pdb

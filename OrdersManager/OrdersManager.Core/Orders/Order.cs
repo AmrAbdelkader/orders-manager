@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace OrdersManager.Core.Orders
 {
@@ -45,6 +46,20 @@ namespace OrdersManager.Core.Orders
         public virtual ReadOnlyCollection<OrderItem> Items
         {
             get { return OrderItems.AsReadOnly(); }
+        }
+
+        /// <summary>
+        /// Gets or sets the total.
+        /// </summary>
+        /// <value>
+        /// The total.
+        /// </value>
+        public double Total
+        {
+            get
+            {
+                return Items.Sum(item => item.Quantity * item.Cost);
+            }
         }
 
         /// <summary>
@@ -118,7 +133,7 @@ namespace OrdersManager.Core.Orders
             else
                 throw new DomainException($"Order {Id} does not have any items with Id {ItemId}");
 
-            DomainEvents.Raise(new OrderItemRemoved() { _OrderItem =  ItemToDelete});
+            DomainEvents.Raise(new OrderItemRemoved() { _OrderItem = ItemToDelete });
         }
 
         /// <summary>

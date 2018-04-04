@@ -36,7 +36,7 @@ namespace OrdersManager.Core.Specification
         /// <returns>
         /// <c>true</c> if [is satisfied by] [the specified object]; otherwise, <c>false</c>.
         /// </returns>
-        public bool IsSatisfiedBy(T obj)
+        public virtual bool IsSatisfiedBy(T obj)
         {
             return CompiledExpression(obj);
         }

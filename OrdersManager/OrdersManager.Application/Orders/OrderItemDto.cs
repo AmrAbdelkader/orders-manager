@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace OrdersManager.Application.Orders
 {
@@ -13,6 +14,7 @@ namespace OrdersManager.Application.Orders
         /// <value>
         /// The item identifier.
         /// </value>
+        [Required]
         public Guid ItemId { get; set; }
         /// <summary>
         /// Gets or sets the quantity.
@@ -20,6 +22,7 @@ namespace OrdersManager.Application.Orders
         /// <value>
         /// The quantity.
         /// </value>
+        [Required]
         public int Quantity { get; set; }
     }
 }

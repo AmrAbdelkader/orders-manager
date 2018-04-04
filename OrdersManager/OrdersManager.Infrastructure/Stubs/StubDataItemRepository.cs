@@ -16,13 +16,13 @@ namespace OrdersManager.Infrastructure.Stubs
             this.memRepository = memRepository;
 
             this.memRepository.Add(Item.Create(new Guid("970d5366-20b3-4f8d-87a6-973cba45c538"),
-                "GTA V For Play Station", 49.00m));
+                "GTA V For Play Station", 49.00));
 
             this.memRepository.Add(Item.Create(new Guid("39b6448e-564c-460c-be06-55fdc31f866d"),
-                "Arduino Stater kit", 100.00m));
+                "Arduino Stater kit", 100.00));
 
             this.memRepository.Add(Item.Create(new Guid("35b00b6e-7918-4f70-b0e1-75b4a23a835c"),
-                "Manchester Bee Logo <3", 20.02m));
+                "Manchester Bee Logo <3", 20.02));
         }
 
         public async Task<Item> FindById(Guid id)

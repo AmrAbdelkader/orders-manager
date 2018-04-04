@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using OrdersManager.Application.Items;
 using OrdersManager.Application.Orders;
 using OrdersManager.Core.Items;
 using OrdersManager.Core.Orders;
@@ -15,7 +14,7 @@ namespace OrdersManager.Application.Mappings
         {
             CreateMap<Order, OrderDto>();
             CreateMap<OrderItem, OrderItemDto>();
-            CreateMap<Item, ItemDto>();
+            //CreateMap<Item, ItemDto>();
 
 
             CreateMap<OrderItem, OrderItemOutputModel>();

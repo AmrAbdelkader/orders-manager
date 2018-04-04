@@ -51,7 +51,7 @@ namespace OrdersManager.Core.Items
         /// <value>
         /// The cost.
         /// </value>
-        public virtual decimal Cost { get; protected set; }
+        public virtual double Price { get; protected set; }
 
         /// <summary>
         /// Creates the specified name.
@@ -59,7 +59,7 @@ namespace OrdersManager.Core.Items
         /// <param name="name">The name.</param>
         /// <param name="cost">The cost.</param>
         /// <returns></returns>
-        public static Item Create(string name, decimal cost)
+        public static Item Create(string name, double cost)
         {
             return Create(Guid.NewGuid(), name, cost);
         }
@@ -71,7 +71,7 @@ namespace OrdersManager.Core.Items
         /// <param name="name">The name.</param>
         /// <param name="cost">The cost.</param>
         /// <returns></returns>
-        public static Item Create(Guid id, string name, decimal cost)
+        public static Item Create(Guid id, string name, double cost)
         {
             Item item = new Item()
             {
@@ -80,7 +80,7 @@ namespace OrdersManager.Core.Items
                 Created = DateTime.Now,
                 Modified = DateTime.Now,
                 Active = true,
-                Cost = cost
+                Price = cost
             };
 
             DomainEvents.Raise<ItemCreated>(new ItemCreated() { Item = item });
