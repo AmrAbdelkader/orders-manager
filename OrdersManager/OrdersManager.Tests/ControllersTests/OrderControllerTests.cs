@@ -29,6 +29,7 @@ namespace OrdersManager.Tests.ControllersTests
 
             var mappings = new MapperConfigurationExpression();
             mappings.AddProfile<ApplicationMapperProfile>();
+            AutoMapper.Mapper.Reset();
             AutoMapper.Mapper.Initialize(mappings);
         }
 

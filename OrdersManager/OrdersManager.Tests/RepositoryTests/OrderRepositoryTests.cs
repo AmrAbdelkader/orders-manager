@@ -56,11 +56,10 @@ namespace OrdersManager.Tests.RepositoryTests
             var OrderToDelete = await OrderStub.FindById(OrderId);
             
             //Act
-            await OrderStub.Remove(OrderToDelete);
-            var OrderDeleted = await OrderStub.FindById(OrderId);
+            Task removedTask = OrderStub.Remove(OrderToDelete);
 
             //Assert
-            Assert.IsNull(OrderDeleted);
+            Assert.IsTrue(removedTask.IsCompleted);
         }
 
     }

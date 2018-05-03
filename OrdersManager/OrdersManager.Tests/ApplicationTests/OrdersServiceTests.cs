@@ -39,6 +39,7 @@ namespace OrdersManager.Tests.ApplicationTests
 
             var mappings = new MapperConfigurationExpression();
             mappings.AddProfile<ApplicationMapperProfile>();
+            AutoMapper.Mapper.Reset();
             AutoMapper.Mapper.Initialize(mappings);
         }
 
@@ -82,6 +83,7 @@ namespace OrdersManager.Tests.ApplicationTests
         {
             //Arrange
             Mock<Order> mockedOrder = new Mock<Order>();
+            mockedOrder.CallBase = true;
             mockedOrder.SetupGet(u => u.Id).Returns(OrderId);
 
             _OrderRepo.Setup(o => o.FindById(OrderId)).ReturnsAsync(mockedOrder.Object);
